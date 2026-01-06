@@ -1,8 +1,8 @@
-import Who from "./../../images/About/group.png"
-import Why from "./../../images/About/why-choose.png"
-import Home from "./../../images/About/about-home-demo.jpg"
-import OurVision from "./../../images/About/vision.jpg"
-import ContactUs from "./../../images/About/contact-us.jpg"
+import Who from "./../images/About/group.png"
+import Why from "./../images/About/why-choose.png"
+import Home from "./../images/About/about-home-demo.jpg"
+import OurVision from "./../images/About/vision.jpg"
+import ContactUs from "./../images/About/contact-us.jpg"
 function About() {
     return <>
         <div>
@@ -11,7 +11,7 @@ function About() {
 
 
 
-            <div className="border-1 rounded-2xl my-10 mx-5 bg-red 500 max-w-220
+            <div className="border rounded-2xl my-10 mx-5 bg-red 500 max-w-220
              flex flex-row gap-5 justify-self-end ">
 
                 <img src={Who} className="w-60 h-60 my-10 mx-5 item-left" />
@@ -31,7 +31,7 @@ function About() {
 
             </div>
 
-            <div className="border-1 rounded-2xl my-10 mx-5 bg-red 500 max-w-250
+            <div className="border rounded-2xl my-10 mx-5 bg-red 500 max-w-250
              flex flex-row gap-5 justify-self-start">
                 <img src={Why} className="w-60 h-60 my-10 mx-5" />
 
@@ -48,7 +48,7 @@ function About() {
                 </div>
             </div>
 
-            <div className="border-1 rounded-2xl my-10 mx-5 bg-red 500 max-w-220
+            <div className="border rounded-2xl my-10 mx-5 bg-red 500 max-w-220
              flex flex-row gap-5 justify-self-end">
                 <img src={OurVision} className="w-80 h-60 my-10 mx-5" />
 
@@ -67,7 +67,7 @@ function About() {
 
             </div>
 
-            <div className="border-1 rounded-2xl my-10 mx-5 bg-red 500 max-w-aotu
+            <div className="border rounded-2xl my-10 mx-5 bg-red 500 max-w-aotu
              flex flex-row gap-5 justify-self-center">
                 <img src={ContactUs} className="w-80 h-60 my-10 mx-5" />
 

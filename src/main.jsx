@@ -1,8 +1,8 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import {BrowserRouter, Routes , Route } from 'react-router'
-import About from './view/About/About'
-import Home from './view/Home/Home'
+import About from './view/About'
+import Home from './view/Home'
 
 
 createRoot(document.getElementById('root')).render(
