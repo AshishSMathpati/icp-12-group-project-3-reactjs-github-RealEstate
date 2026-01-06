@@ -1,12 +1,13 @@
 import React from "react";
 import Navbar from "../component/Navbar";
 import { Link } from "react-router";
+import Services from "../component/Services";
+import { Shield, Users, Handshake, TrendingUp } from "lucide-react";
 
 function Home() {
   return (
     <div>
       <Navbar />
-
       <div className="relative flex justify-center items-center flex-wrap w-full">
         <img
           src="../src/images/home/backgroundRealEstate.jpeg"
@@ -15,7 +16,7 @@ function Home() {
         />
         <div className="absolute top-45 md:pl-0">
           <p className="text-4xl w-90 md:w-150 md:text-6xl font-medium text-white">
-            Find Your Perfect Home with 
+            Find Your Perfect Home with
             <span className="text-red-500"> RealEstate</span> Realty
           </p>
           <p className="text-white m-0 text-lg md:text-xl w-80  my-8 md:w-170 ">
@@ -34,6 +35,63 @@ function Home() {
             </Link>
           </Link>
         </div>
+      </div>
+
+      <div className=" w-full my-16">
+        <p className="text-4xl text-gray-500 text-center">
+          Why Choose RealEstate?
+        </p>
+        <p className="w-80 md:w-180 mx-auto text-xl text-gray-500 text-center my-4">
+          We're committed to providing exceptional service and helping you find
+          the property of your dreams.
+        </p>
+      </div>
+
+      <div className="flex justify-around items-center flex-wrap md:mx-40 mx-8">
+        <Services
+          icon={
+            <Shield
+              size={60}
+              className="text-white border p-2 rounded-2xl bg-red-500"
+            />
+          }
+          title="Verified Listings"
+          description="Every property is thoroughly verified to ensure authenticity and
+        quality."
+        />
+
+        <Services
+          icon={
+            <Users
+              size={60}
+              className="text-white border p-2 rounded-2xl bg-red-500"
+            />
+          }
+          title="Trusted Agents"
+          description="Our experienced agents are committed to finding your perfect home."
+        />
+
+        <Services
+          icon={
+            <Handshake
+              size={60}
+              className="text-white border p-2 rounded-2xl bg-red-500"
+            />
+          }
+          title="Best Deals"
+          description="Get access to exclusive listings and competitive market prices."
+        />
+
+        <Services
+          icon={
+            <TrendingUp
+              size={60}
+              className="text-white border p-2 rounded-2xl bg-red-500"
+            />
+          }
+          title="Market Insights"
+          description="Stay informed with our expert analysis and property trends."
+        />
       </div>
     </div>
   );
