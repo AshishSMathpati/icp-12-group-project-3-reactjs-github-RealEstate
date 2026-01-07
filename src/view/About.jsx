@@ -18,7 +18,7 @@ function About() {
                         Team
                         </p>
 
-                        <p className="text-sm w-90 md:w-150 md:text-xl font-medium text-black py-10">
+                        <p className="text-sm w-90 md:w-150 md:text-xl font-medium text-white py-10">
                             Our team of real estate advisors, property consultants, and legal
                              experts work collaboratively to ensure seamless transactions.
                               Each team member brings specialized expertise, ensuring you receive
