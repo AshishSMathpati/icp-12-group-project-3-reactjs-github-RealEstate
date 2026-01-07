@@ -3,22 +3,27 @@ import Why from "./../images/About/why-choose.png"
 import Home from "./../images/About/about-home-demo.jpg"
 import OurVision from "./../images/About/vision.jpg"
 import ContactUs from "./../images/About/contact-us.jpg"
+import Navbar from "../component/Navbar"
+import Footer from "../component/Footer"
 function About() {
     return <>
         <div>
-            <h1 className="text-6xl py-5 text-center">About Page</h1>
-            <img src={Home} className="h-110 w-220 mx-45 shadow-xl/30 shadow-red-500/50   " />
+            <Navbar/>
+            <div>
+                <img src={Home} className="h-110 w-220 mx-45 shadow-xl/30 shadow-red-500/50   " />
+            </div>
+            
 
 
 
             <div className="border rounded-2xl my-10 mx-5 bg-red 500 max-w-220
-             flex flex-row gap-5 justify-self-end ">
+             flex flex-row gap-5 justify-self-end hover:scale-102 hover:bg-red-200 duration-200 ">
 
                 <img src={Who} className="w-60 h-60 my-10 mx-5 item-left" />
 
-                <div className="item-right flex flex-col p-5 bg-red-800/50">
+                <div className="item-right flex flex-col p-5 bg-red-500">
 
-                    <h1 className="text-3xl font-extrabold p-5 text-center">Who We Are</h1>
+                    <h1 className="text-3xl font-extrabold p-5 text-center ">Who We Are</h1>
                     <p>Welcome to Real Estate, a trusted name in the real estate industry committed
                         to helping individuals, families, and investors find the perfect property. With a strong
                         understanding of the local market and a passion for excellence, we deliver transparent,
@@ -32,10 +37,10 @@ function About() {
             </div>
 
             <div className="border rounded-2xl my-10 mx-5 bg-red 500 max-w-250
-             flex flex-row gap-5 justify-self-start">
+             flex flex-row gap-5 justify-self-start hover:scale-102 hover:bg-red-200 duration-200">
                 <img src={Why} className="w-60 h-60 my-10 mx-5" />
 
-                <div className="item-right flex flex-col p-5 bg-red-800/50">
+                <div className="item-right flex flex-col p-5 bg-red-500">
 
                     <h1 className="text-3xl font-extrabold p-5 text-center">Why choose US ?</h1>
                     <p>
@@ -49,10 +54,10 @@ function About() {
             </div>
 
             <div className="border rounded-2xl my-10 mx-5 bg-red 500 max-w-220
-             flex flex-row gap-5 justify-self-end">
+             flex flex-row gap-5 justify-self-end hover:scale-102 hover:bg-red-200 duration-200">
                 <img src={OurVision} className="w-80 h-60 my-10 mx-5" />
 
-                <div className="item-right flex flex-col p-5 bg-red-800/50">
+                <div className="item-right flex flex-col p-5 bg-red-500">
 
                     <h1 className="text-3xl font-extrabold p-5 text-center">Our Vision</h1>
                     <p>Welcome to Real Estate, a trusted name in the real estate industry committed
@@ -68,10 +73,10 @@ function About() {
             </div>
 
             <div className="border rounded-2xl my-10 mx-5 bg-red 500 max-w-aotu
-             flex flex-row gap-5 justify-self-center">
+             flex flex-row gap-5 justify-self-center hover:scale-102 hover:bg-red-200 duration-200">
                 <img src={ContactUs} className="w-80 h-60 my-10 mx-5" />
 
-                <div className="item-right flex flex-col p-5 bg-red-800/50">
+                <div className="item-right flex flex-col p-5 bg-red-500">
 
                     <h1 className="text-3xl font-extrabold p-5 text-center">Get In Touch with Us !</h1>
                     <p className="text-lg">Whether you are looking to buy your dream home, sell your property,
@@ -85,6 +90,7 @@ function About() {
 
             </div>
         </div>
+        <Footer/>
     </>
 }
 
