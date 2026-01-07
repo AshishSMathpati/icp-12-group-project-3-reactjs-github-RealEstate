@@ -25,25 +25,25 @@ function Navbar() {
             Home
           </Link>
           <Link
-            to="/"
+            to="/property"
             className="text-xl mx-3 hover:text-red-500 scale-100 transition-all duration-300"
           >
             Properties
           </Link>
           <Link
-            to="/"
+            to="/about"
             className="text-xl mx-3 hover:text-red-500 scale-100 transition-all duration-300"
           >
             About Us
           </Link>
           <Link
-            to="/"
+            to="/contact"
             className="text-xl mx-3 hover:text-red-500 scale-100 transition-all duration-300"
           >
             Contact Us
           </Link>
           <Link
-            to="/"
+            to="/login"
             className="text-xl mx-3 hover:text-red-500 scale-100 transition-all duration-300"
           >
             Login
@@ -67,28 +67,28 @@ function Navbar() {
               Home
             </Link>
             <Link
-              to="/"
+              to="/property"
               className="font-bold text-xl py-2 hover:text-red-500"
               onClick={() => setIsOpen(false)}
             >
               Properties
             </Link>
             <Link
-              to="/"
+              to="/about"
               className="font-bold text-xl py-2 hover:text-red-500"
               onClick={() => setIsOpen(false)}
             >
               About Us
             </Link>
             <Link
-              to="/"
+              to="/contact"
               className="font-bold text-xl py-2 hover:text-red-500"
               onClick={() => setIsOpen(false)}
             >
               Contact Us
             </Link>
             <Link
-              to="/"
+              to="/login"
               className="font-bold text-xl py-2 hover:text-red-500"
               onClick={() => setIsOpen(false)}
             >
