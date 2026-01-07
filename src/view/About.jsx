@@ -8,16 +8,31 @@ import Footer from "../component/Footer"
 function About() {
     return <>
         <div>
-            <Navbar/>
-            <div>
-                <img src={Home} className="h-110 w-220 mx-45 shadow-xl/30 shadow-red-500/50   " />
+            <Navbar />
+            <div className="relative flex justify-center  flex-wrap w-full ">
+                <img src={Home} className=" mx-45 shadow-xl/30 shadow-red-500/50   " />
+                <div className="absolute top-45 md:pl-0">
+                    <p className="text-4xl w-80 md:w-150 md:text-6xl font-medium text-white">
+                        Our  
+                        <span className="px-5 text-red-500">RealEstate</span>
+                        Team
+                        </p>
+
+                        <p className="text-sm w-90 md:w-150 md:text-xl font-medium text-black py-10">
+                            Our team of real estate advisors, property consultants, and legal
+                             experts work collaboratively to ensure seamless transactions.
+                              Each team member brings specialized expertise, ensuring you receive
+                               accurate advice and personalized service.
+                        </p>
+                </div>
+
             </div>
-            
+
 
 
 
             <div className="border rounded-2xl my-10 mx-5 bg-red 500 max-w-220
-             flex flex-row gap-5 justify-self-end hover:scale-102 hover:bg-red-200 duration-200 ">
+             flex flex-row gap-5 justify-self-end hover:scale-102 hover:bg-red-200 duration-400 ">
 
                 <img src={Who} className="w-60 h-60 my-10 mx-5 item-left" />
 
@@ -37,7 +52,7 @@ function About() {
             </div>
 
             <div className="border rounded-2xl my-10 mx-5 bg-red 500 max-w-250
-             flex flex-row gap-5 justify-self-start hover:scale-102 hover:bg-red-200 duration-200">
+             flex flex-row gap-5 justify-self-start hover:scale-102 hover:bg-red-200 duration-400">
                 <img src={Why} className="w-60 h-60 my-10 mx-5" />
 
                 <div className="item-right flex flex-col p-5 bg-red-500">
@@ -54,7 +69,7 @@ function About() {
             </div>
 
             <div className="border rounded-2xl my-10 mx-5 bg-red 500 max-w-220
-             flex flex-row gap-5 justify-self-end hover:scale-102 hover:bg-red-200 duration-200">
+             flex flex-row gap-5 justify-self-end hover:scale-102 hover:bg-red-200 duration-400">
                 <img src={OurVision} className="w-80 h-60 my-10 mx-5" />
 
                 <div className="item-right flex flex-col p-5 bg-red-500">
@@ -73,14 +88,14 @@ function About() {
             </div>
 
             <div className="border rounded-2xl my-10 mx-5 bg-red 500 max-w-aotu
-             flex flex-row gap-5 justify-self-center hover:scale-102 hover:bg-red-200 duration-200">
+             flex flex-row gap-5 justify-self-center hover:scale-102 hover:bg-red-200 duration-400">
                 <img src={ContactUs} className="w-80 h-60 my-10 mx-5" />
 
                 <div className="item-right flex flex-col p-5 bg-red-500">
 
                     <h1 className="text-3xl font-extrabold p-5 text-center">Get In Touch with Us !</h1>
                     <p className="text-lg">Whether you are looking to buy your dream home, sell your property,
-                         or invest in real estate, RealEstate is here to help. <br /> <br />
+                        or invest in real estate, RealEstate is here to help. <br /> <br />
 
                         📞 Phone: +91 9172896214 <br />
                         📧 Email: ashishsmathpati@gmail.com <br />
@@ -90,7 +105,7 @@ function About() {
 
             </div>
         </div>
-        <Footer/>
+        <Footer />
     </>
 }
 
