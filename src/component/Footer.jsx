@@ -30,22 +30,32 @@ function Footer() {
             residential and commercial properties across prime locations.
           </p>
           <div className="my-5 flex">
-            <Instagram
-              size={45}
-              className="text-white bg-neutral-700 p-3 m-2 rounded-4xl hover:bg-red-500 duration-300 cursor-pointer"
-            />
-            <Facebook
-              size={45}
-              className="text-white bg-neutral-700 p-3 m-2 rounded-4xl hover:bg-red-500 duration-300 cursor-pointer"
-            />
-            <Twitter
-              size={45}
-              className="text-white bg-neutral-700 p-3 m-2 rounded-4xl hover:bg-red-500 duration-300 cursor-pointer"
-            />
-            <Linkedin
-              size={45}
-              className="text-white bg-neutral-700 p-3 m-2 rounded-4xl hover:bg-red-500 duration-300 cursor-pointer"
-            />
+            <a href="https://www.instagram.com/tcf.realty?igsh=ZW0zdzdkcWZ6aHhi">
+              <Instagram
+                size={45}
+                className="text-white bg-neutral-700 p-3 m-2 rounded-4xl hover:bg-red-500 duration-300 cursor-pointer"
+              />
+            </a>
+            <a href="https://www.facebook.com/p/TCF-Realty-61579154775005/?hr=1&wtsid=rdr_0nfKR3MCDueyW0GPq#">
+              <Facebook
+                size={45}
+                className="text-white bg-neutral-700 p-3 m-2 rounded-4xl hover:bg-red-500 duration-300 cursor-pointer"
+              />
+            </a>
+
+            <a href="https://www.linkedin.com/in/tcf-realty-58767437b/">
+              <Twitter
+                size={45}
+                className="text-white bg-neutral-700 p-3 m-2 rounded-4xl hover:bg-red-500 duration-300 cursor-pointer"
+              />
+            </a>
+
+            <a href="https://x.com/realestate?lang=en">
+              <Linkedin
+                size={45}
+                className="text-white bg-neutral-700 p-3 m-2 rounded-4xl hover:bg-red-500 duration-300 cursor-pointer"
+              />
+            </a>
           </div>
         </div>
         <div className="flex flex-col items-start m-5">
@@ -58,25 +68,25 @@ function Footer() {
               Home
             </Link>
             <Link
-              to="/"
+              to="/property"
               className=" text-xl mx-3 my-2 hover:text-red-500 scale-100 transition-all duration-300"
             >
               Properties
             </Link>
             <Link
-              to="/"
+              to="/about"
               className="text-xl mx-3 my-2 hover:text-red-500 scale-100 transition-all duration-300"
             >
               About Us
             </Link>
             <Link
-              to="/"
+              to="/contact"
               className="text-xl mx-3 my-2 hover:text-red-500 scale-100 transition-all duration-300"
             >
               Contact Us
             </Link>
             <Link
-              to="/"
+              to="/login"
               className="text-xl mx-3 my-2 hover:text-red-500 scale-100 transition-all duration-300"
             >
               Login

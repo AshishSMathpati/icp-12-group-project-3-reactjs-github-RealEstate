@@ -59,7 +59,7 @@ function Home() {
             journey seamless.
           </p>
           <Link
-            to="/properties"
+            to="/property"
             className=" px-3 py-2 md:px-6 md:my-4 md:py-2.5 text-lg bg-red-500 text-white rounded-xl cursor-pointer hover:bg-red-600 duration-300"
           >
             Explore Properties →
