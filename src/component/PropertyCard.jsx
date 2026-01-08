@@ -1,9 +1,10 @@
 import LikeButton from "./LikeButton";
+import { MapPin } from "lucide-react";
+import Button from "./Button";
 
 function PropertyCard({ property }) {
   return (
     <div className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden relative">
-
       <img
         src={property.image}
         alt={property.title}
@@ -13,16 +14,22 @@ function PropertyCard({ property }) {
       <LikeButton id={property.id} />
 
       {/* Tag */}
-      <span className="absolute top-3 left-3 bg-green-700 text-white text-xs px-3 py-1 rounded-full">
+      <span className="absolute top-3 left-3 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
         {property.tag}
       </span>
 
       <div className="p-4">
-        <p className="text-green-700 font-bold">{property.price}</p>
+        <p className="text-gray-700 font-bold">{property.price}</p>
 
-        <h2 className="font-semibold text-lg mt-1">{property.title}</h2>
+        <h2 className="font-semibold text-red-500 text-lg mt-1">
+          {property.title}
+        </h2>
 
-        <p className="text-gray-500 text-sm">📍 {property.location}</p>
+        <div className="text-gray-700 text-sm flex gap-1">
+          <MapPin /> {property.location}
+        </div>
+
+        <Button property={property} />
       </div>
     </div>
   );
