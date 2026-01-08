@@ -5,6 +5,7 @@ import About from './view/About'
 import Home from './view/Home'
 import Property from './view/Property'
 import Contact from './view/Contact'
+import LogIn from './view/LogIn';
 
 
 createRoot(document.getElementById('root')).render(
@@ -15,7 +16,7 @@ createRoot(document.getElementById('root')).render(
     <Route  path='/' element={<Home/>} />
     <Route  path='/about' element={<About/>} />
     <Route  path='/contact' element={<Contact/>} />
-    <Route  path='/properties' element={<Properties/>} />
+    <Route  path='/property' element={<Property/>} />
     <Route  path='/login' element={<LogIn/>} />
     
 </Routes>
