@@ -20,31 +20,31 @@ function Navbar() {
         <div className="hidden md:flex justify-evenly items-center">
           <Link
             to="/"
-            className="font-bold text-xl mx-3 hover:text-red-500 scale-100 transition-all duration-300"
+            className="text-xl mx-3 hover:text-red-500 scale-100 transition-all duration-300"
           >
             Home
           </Link>
           <Link
             to="/"
-            className="font-bold text-xl mx-3 hover:text-red-500 scale-100 transition-all duration-300"
+            className="text-xl mx-3 hover:text-red-500 scale-100 transition-all duration-300"
           >
             Properties
           </Link>
           <Link
             to="/"
-            className="font-bold text-xl mx-3 hover:text-red-500 scale-100 transition-all duration-300"
+            className="text-xl mx-3 hover:text-red-500 scale-100 transition-all duration-300"
           >
             About Us
           </Link>
           <Link
             to="/"
-            className="font-bold text-xl mx-3 hover:text-red-500 scale-100 transition-all duration-300"
+            className="text-xl mx-3 hover:text-red-500 scale-100 transition-all duration-300"
           >
             Contact Us
           </Link>
           <Link
             to="/"
-            className="font-bold text-xl mx-3 hover:text-red-500 scale-100 transition-all duration-300"
+            className="text-xl mx-3 hover:text-red-500 scale-100 transition-all duration-300"
           >
             Login
           </Link>
