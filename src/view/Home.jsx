@@ -12,32 +12,12 @@ import {
   ChevronRight,
 } from "lucide-react";
 import Footer from "../component/Footer";
+import clientArray from "../config/client";
+import { properties } from "../config/properties";
+import PropertyCard from "../component/PropertyCard";
+import LikeButton from "../component/LikeButton";
 
 function Home() {
-  const clientArray = [
-    {
-      title:
-        "The attention to detail and personalized service was exceptional. They found us a stunning villa that exceeded all our expectations.Thank you, RealEstate!",
-      img: "https://avatar.iran.liara.run/public/25",
-      name: "Pratik Salunke",
-      role: "Luxury Home Buyer",
-    },
-    {
-      title:
-        "RealEstate made finding our dream home so easy. Their agents were patient, knowledgeable, and truly understood what we were looking for. Highly recommended!",
-      img: "https://avatar.iran.liara.run/public/40",
-      name: "Atharv Bolke",
-      role: "First-time Buyer",
-    },
-    {
-      title:
-        "As an investor, I need reliable partners. RealEstate has consistently delivered excellent properties with great ROI. Their market insights are invaluable.",
-      img: "https://avatar.iran.liara.run/public",
-      name: "Ashish Mathpati",
-      role: "Property Investor",
-    },
-  ];
-
   const [index, setIndex] = useState(0);
   return (
     <div>
@@ -49,7 +29,7 @@ function Home() {
           className="w-full h-180 brightness-30"
         />
         <div className="absolute top-45 md:pl-0">
-          <p className="text-4xl w-90 md:w-150 md:text-6xl font-medium text-white">
+          <p className="text-3xl text-center w-90 md:w-150 md:text-6xl font-medium text-white">
             Find Your Perfect Home with
             <span className="text-red-500"> RealEstate</span> Realty
           </p>
@@ -60,7 +40,7 @@ function Home() {
           </p>
           <Link
             to="/property"
-            className=" px-3 py-2 md:px-6 md:my-4 md:py-2.5 text-lg bg-red-500 text-white rounded-xl cursor-pointer hover:bg-red-600 duration-300"
+            className=" px-3 py-2 w-50 md:px-6 md:my-4 md:py-2.5 text-lg bg-red-500 text-white rounded-xl cursor-pointer hover:bg-red-600 duration-300"
           >
             Explore Properties →
           </Link>
@@ -71,6 +51,29 @@ function Home() {
             Contact Us
           </Link>
         </div>
+      </div>
+
+      <p className="md:text-4xl text-xl mt-10 text-center">Featured Properties</p>
+      <p className="md:text-lg text-sm text-center my-5 text-gray-500">
+        Explore our handpicked selection of premium properties in the most
+        desirable locations.
+      </p>
+
+      <div className="max-w-6xl mx-auto  grid sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6 ">
+        {properties.slice(0, 3).map((property, idx) => {
+          return <div className="mx-3">
+            <PropertyCard key={idx} property={property} />
+          </div>
+        })}
+      </div>
+
+      <div className="flex justify-center my-5">
+        <Link
+          to="/property"
+          className=" px-3 py-2 md:px-6 md:my-4 md:py-2.5 text-lg border rounded-xl cursor-pointer hover:text-white hover:bg-red-500 duration-300"
+        >
+          View All Properties →
+        </Link>
       </div>
 
       <div className=" w-full my-16">
@@ -154,20 +157,28 @@ function Home() {
             <p className="font-semibold text-lg">{clientArray[index].name}</p>
             <p className="text-gray-500 text-sm">{clientArray[index].role}</p>
             <div className="flex justify-center items-center mt-5">
-              <ChevronLeft size={50} className="m-2 cursor-pointer text-white bg-neutral-600 rounded-3xl hover:text-red-500 duration-300" onClick={() => {
-                if(index > 0) {
-                  setIndex(index - 1);
-                } else {
-                  setIndex(0);
-                }
-              }} />
-              <ChevronRight size={50} className="m-2 cursor-pointer text-white bg-neutral-600 rounded-3xl hover:text-red-500 duration-300" onClick={() => {
-                if (index < clientArray.length - 1) {
-                  setIndex(index + 1);
-                } else {
-                  setIndex(0);
-                }
-              }} />
+              <ChevronLeft
+                size={50}
+                className="m-2 cursor-pointer text-white bg-neutral-600 rounded-3xl hover:text-red-500 duration-300"
+                onClick={() => {
+                  if (index > 0) {
+                    setIndex(index - 1);
+                  } else {
+                    setIndex(0);
+                  }
+                }}
+              />
+              <ChevronRight
+                size={50}
+                className="m-2 cursor-pointer text-white bg-neutral-600 rounded-3xl hover:text-red-500 duration-300"
+                onClick={() => {
+                  if (index < clientArray.length - 1) {
+                    setIndex(index + 1);
+                  } else {
+                    setIndex(0);
+                  }
+                }}
+              />
             </div>
           </div>
         </div>

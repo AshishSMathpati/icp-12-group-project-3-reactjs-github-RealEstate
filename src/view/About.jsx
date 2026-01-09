@@ -9,16 +9,16 @@ function About() {
     return <>
         <div>
             <Navbar />
-            <div className="relative flex justify-center  flex-wrap w-full ">
-                <img src={Home} className=" mx-45 shadow-xl/30 shadow-red-500/50   " />
+            <div className="relative flex justify-center md:flex flex-wrap w-full ">
+                <img src={Home} className="  shadow-xl/30 shadow-red-500/50  md:h-full md:w-auto  " />
                 <div className="absolute top-45 md:pl-0">
-                    <p className="text-4xl w-80 md:w-150 md:text-6xl font-medium text-white">
+                    <p className="text-4xl w-90 md:w-150 md:text-6xl font-medium text-white">
                         Our  
                         <span className="px-5 text-red-500">RealEstate</span>
                         Team
                         </p>
 
-                        <p className="text-sm w-90 md:w-150 md:text-xl font-medium text-white py-10">
+                        <p className="text-sm w-90 md:w-150 md:text-lg font-medium text-white text-white py-10">
                             Our team of real estate advisors, property consultants, and legal
                              experts work collaboratively to ensure seamless transactions.
                               Each team member brings specialized expertise, ensuring you receive
@@ -34,14 +34,15 @@ function About() {
 
 
             <div className="border rounded-2xl my-10 mx-5 bg-red 500 max-w-220
-             flex flex-row gap-5 justify-self-end hover:scale-102 hover:bg-red-200 duration-400 ">
+             flex flex-row gap-5 justify-self-end hover:scale-102 hover:bg-red-200
+              duration-400 shadow hover:shadow-xl shadow-red-500/60">
 
                 <img src={Who} className="w-60 h-60 my-10 mx-5 item-left" />
 
                 <div className="item-right flex flex-col p-5 bg-red-500">
 
-                    <h1 className="text-3xl font-extrabold p-5 text-center ">Who We Are</h1>
-                    <p>Welcome to Real Estate, a trusted name in the real estate industry committed
+                    <h1 className="text-3xl font-extrabold p-5 text-center text-white ">Who We Are</h1>
+                    <p className="text-white">Welcome to Real Estate, a trusted name in the real estate industry committed
                         to helping individuals, families, and investors find the perfect property. With a strong
                         understanding of the local market and a passion for excellence, we deliver transparent,
                         reliable, and client-focused real estate solutions.
@@ -54,13 +55,14 @@ function About() {
             </div>
 
             <div className="border rounded-2xl my-10 mx-5 bg-red 500 max-w-250
-             flex flex-row gap-5 justify-self-start hover:scale-102 hover:bg-red-200 duration-400">
+             flex flex-row gap-5 justify-self-start hover:scale-102 hover:bg-red-200 
+             duration-400 shadow hover:shadow-xl shadow-red-500/60">
                 <img src={Why} className="w-60 h-60 my-10 mx-5" />
 
                 <div className="item-right flex flex-col p-5 bg-red-500">
 
-                    <h1 className="text-3xl font-extrabold p-5 text-center">Why choose US ?</h1>
-                    <p>
+                    <h1 className="text-3xl font-extrabold p-5 text-center text-white">Why choose US ?</h1>
+                    <p className="text-white">
                         1. Our team consists of skilled real estate experts with in-depth market knowledge. <br />
                         2. No hidden charges, clear communication, and honest pricing. <br />
                         3. Your needs and goals always come first. <br />
@@ -71,13 +73,14 @@ function About() {
             </div>
 
             <div className="border rounded-2xl my-10 mx-5 bg-red 500 max-w-220
-             flex flex-row gap-5 justify-self-end hover:scale-102 hover:bg-red-200 duration-400">
+             flex flex-row gap-5 justify-self-end hover:scale-102 hover:bg-red-200 
+             duration-400 shadow hover:shadow-xl shadow-red-500/60">
                 <img src={OurVision} className="w-80 h-60 my-10 mx-5" />
 
                 <div className="item-right flex flex-col p-5 bg-red-500">
 
-                    <h1 className="text-3xl font-extrabold p-5 text-center">Our Vision</h1>
-                    <p>Welcome to Real Estate, a trusted name in the real estate industry committed
+                    <h1 className="text-3xl font-extrabold p-5 text-center text-white">Our Vision</h1>
+                    <p className="text-white">Welcome to Real Estate, a trusted name in the real estate industry committed
                         to helping individuals, families, and investors find the perfect property. With a strong
                         understanding of the local market and a passion for excellence, we deliver transparent,
                         reliable, and client-focused real estate solutions.
@@ -90,13 +93,14 @@ function About() {
             </div>
 
             <div className="border rounded-2xl my-10 mx-5 bg-red 500 max-w-aotu
-             flex flex-row gap-5 justify-self-center hover:scale-102 hover:bg-red-200 duration-400">
+             flex flex-row gap-5 justify-self-center hover:scale-102 hover:bg-red-200 
+             duration-400 shadow hover:shadow-xl shadow-red-500/60">
                 <img src={ContactUs} className="w-80 h-60 my-10 mx-5" />
 
                 <div className="item-right flex flex-col p-5 bg-red-500">
 
-                    <h1 className="text-3xl font-extrabold p-5 text-center">Get In Touch with Us !</h1>
-                    <p className="text-lg">Whether you are looking to buy your dream home, sell your property,
+                    <h1 className="text-3xl font-extrabold p-5 text-center text-white">Get In Touch with Us !</h1>
+                    <p className="text-lg text-white">Whether you are looking to buy your dream home, sell your property,
                         or invest in real estate, RealEstate is here to help. <br /> <br />
 
                         📞 Phone: +91 9172896214 <br />

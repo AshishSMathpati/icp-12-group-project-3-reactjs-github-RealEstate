@@ -25,7 +25,7 @@ function Footer() {
               Real<span className="text-red-500">Estate</span>
             </p>
           </div>
-          <p className="text-white mt-5 w-80 text-lg">
+          <p className="text-white mt-5 w-60 md:w-80 text-lg">
             Your trusted partner in finding the perfect home. We specialize in
             residential and commercial properties across prime locations.
           </p>
