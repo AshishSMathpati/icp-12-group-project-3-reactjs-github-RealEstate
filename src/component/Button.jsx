@@ -1,16 +1,13 @@
-function BuyButton({ property }) {
-  const BuyProperty = () => {
-    alert(`You selected ${property.title} for ${property.price}`);
-  };
-
+function Button({ title , onClick}) {
   return (
     <button
-      onClick={BuyProperty}
-      className="mt-4 w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg hover:bg-red-450, cursor-pointer transition"
+    onClick={onClick}
+      className="mt-4 w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg  cursor-pointer transition"
     >
-      Buy Now
+      {title}
     </button>
   );
 }
 
-export default BuyButton;
+export default Button;
+ 
