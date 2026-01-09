@@ -7,7 +7,7 @@ function LogIn() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    if (username === "admin" && password === "12345") {
+    if (username === "" && password === "") {
       alert("Login Successful!");
     } else {
       alert("Invalid Username or Password");
