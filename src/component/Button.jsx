@@ -1,14 +1,10 @@
-function Button({ property }) {
-  const handleBuy = () => {
-    alert(`You selected ${property.title} for ${property.price}`);
-  };
-
+function Button({ title , onClick}) {
   return (
     <button
-      onClick={handleBuy}
+    onClick={onClick}
       className="mt-4 w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg  cursor-pointer transition"
     >
-      Buy Now
+      {title}
     </button>
   );
 }

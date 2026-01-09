@@ -3,9 +3,11 @@ import LikeButton from "./LikeButton";
 import Button from "./Button";
 
 function PropertyCard({ property }) {
+  const handleBuy = () => {
+    alert(`You selected ${property.title} for ${property.price}`);
+  };
   return (
     <div className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden relative">
-
       <img
         src={property.image}
         alt={property.title}
@@ -22,10 +24,16 @@ function PropertyCard({ property }) {
       <div className="p-4">
         <p className="text-gray-500 font-bold">{property.price}</p>
 
-        <h2 className="font-semibold text-red-500 text-lg mt-1">{property.title}</h2>
+        <h2 className="font-semibold text-red-500 text-lg mt-1">
+          {property.title}
+        </h2>
 
-        <p className="text-gray-500 text-sm flex gap-1"> <MapPin /> {property.location}</p>
-        <Button property={property} />
+        <p className="text-gray-500 text-sm flex gap-1">
+          {" "}
+          <MapPin /> {property.location}
+        </p>
+
+        <Button onClick={handleBuy} title="Buy Now" />
       </div>
     </div>
   );
