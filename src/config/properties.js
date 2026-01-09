@@ -4,6 +4,10 @@ import urbanLoft from "../assets/urbanLoft.png";
 import coastalBeatchHouse from "../assets/coastalBeatchHouse.png";
 import downTownPenthouse from "../assets/downTownPenthouse.png";
 import modernLuxuryVilla from "../assets/modernLuxuryVilla.png";
+import mountainCabinRetreat from "../assets/mountainCabinRetreat.png";
+import lakeViewApartment from "../assets/lakeViewApartment.png";
+import commercialOfficeSpace from "../assets/commercialOfficeSpace.png";
+
 
 export const properties = [
     {
@@ -26,7 +30,7 @@ export const properties = [
         id: 3,
         title: "Urban Loft Apartment",
         location: "Brooklyn",
-        price: "$3,500/mo",
+        price: "$3,500",
         tag: "For Rent",
         image: urbanLoft,
     },
@@ -53,5 +57,29 @@ export const properties = [
         price: "$1,250,000",
         tag: "Featured",
         image: modernLuxuryVilla,
+    },
+     {
+        id: 7,
+        title: "Mountain Cabin Retreat",
+        location: "Aspen",
+        price: "$740,000",
+        tag: "For Sale",
+        image: mountainCabinRetreat,
+    },
+    {
+        id: 8,
+        title: "Lake View Apartment",
+        location: "Chicago",
+        price: "$2,800",
+        tag: "For Rent",
+        image: lakeViewApartment,
+    },
+    {
+        id: 9,
+        title: "Commercial Office Space",
+        location: "San Francisco",
+        price: "$1,980,000",
+        tag: "Featured",
+        image: commercialOfficeSpace,
     },
 ];
