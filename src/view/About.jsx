@@ -1,8 +1,8 @@
-import Who from "./../images/About/group.png"
-import Why from "./../images/About/why-choose.png"
-import Home from "./../images/About/about-home-demo.jpg"
-import OurVision from "./../images/About/vision.jpg"
-import ContactUs from "./../images/About/contact-us.jpg"
+import Who from "./../assets/group.png"
+import Why from "./../assets/why-choose.png"
+import Home from "./../assets/about-home-demo.jpg"
+import OurVision from "./../assets/vision.jpg"
+import ContactUs from "./../assets/contact-us.jpg"
 import Navbar from "../component/Navbar"
 import Footer from "../component/Footer"
 function About() {

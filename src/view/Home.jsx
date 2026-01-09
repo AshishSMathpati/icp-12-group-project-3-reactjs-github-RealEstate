@@ -24,7 +24,7 @@ function Home() {
       <Navbar />
       <div className="relative flex justify-center items-center flex-wrap w-full">
         <img
-          src="../src/images/home/backgroundRealEstate.jpeg"
+          src="../src/assets/backgroundRealEstate.jpeg"
           alt="background-image"
           className="w-full h-180 brightness-30"
         />
