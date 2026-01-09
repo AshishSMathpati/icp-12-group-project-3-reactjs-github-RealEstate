@@ -16,6 +16,7 @@ import clientArray from "../config/client";
 import { properties } from "../config/properties";
 import PropertyCard from "../component/PropertyCard";
 import LikeButton from "../component/LikeButton";
+import backgroundImage from "../assets/backgroundRealEstate.jpeg";
 
 function Home() {
   const [index, setIndex] = useState(0);
@@ -24,7 +25,7 @@ function Home() {
       <Navbar />
       <div className="relative flex justify-center items-center flex-wrap w-full">
         <img
-          src="../src/assets/backgroundRealEstate.jpeg"
+          src={backgroundImage}
           alt="background-image"
           className="w-full h-180 brightness-30"
         />
