@@ -1,67 +1,52 @@
  import React, { useState, useEffect } from "react";
 
 function LogIn() {
-  const [isSignup, setIsSignup] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  // 🔹 Check login on page load
+  
   useEffect(() => {
-    const status = localStorage.getItem("isLoggedIn");
-    if (status === "true") {
+    const user = localStorage.getItem("user");
+    if (user) {
       setIsLoggedIn(true);
     }
   }, []);
 
-  // 🔹 SIGN UP
-  const handleSignup = (e) => {
+  const handleLogIn = (e) => {
     e.preventDefault();
 
-    localStorage.setItem("savedUsername", username);
-    localStorage.setItem("savedPassword", password);
+    if (username === "admin" && password === "12345") {
+      
+      localStorage.setItem(
+        "user",
+        JSON.stringify({ username: username })
+      );
 
-    alert("Signup Successful! Now Sign In.");
-    setIsSignup(false);
-
-    setUsername("");
-    setPassword("");
-  };
-
-  // 🔹 SIGN IN
-  const handleLogin = (e) => {
-    e.preventDefault();
-
-    const savedUser = localStorage.getItem("savedUsername");
-    const savedPass = localStorage.getItem("savedPassword");
-
-    if (username === savedUser && password === savedPass) {
-      localStorage.setItem("isLoggedIn", "true");
       setIsLoggedIn(true);
-      alert("Login Successful!");
+      alert("LogIn Successful!");
     } else {
       alert("Invalid Username or Password");
     }
   };
 
-  // 🔹 LOGOUT
   const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("user");
     setIsLoggedIn(false);
+    alert("Logged out successfully");
   };
 
-  // 🔹 After Login Screen
+  
   if (isLoggedIn) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
         <div className="bg-white p-8 rounded-xl shadow-lg text-center">
           <h2 className="text-2xl font-bold mb-4">
-            Welcome {localStorage.getItem("savedUsername")}
+            Welcome Admin 👋
           </h2>
           <button
             onClick={handleLogout}
-            className="bg-red-500 text-white px-6 py-2 rounded-md"
+            className="bg-red-500 text-white px-6 py-2 rounded-md hover:bg-red-600"
           >
             Logout
           </button>
@@ -70,23 +55,19 @@ function LogIn() {
     );
   }
 
-  // 🔹 LOGIN / SIGNUP FORM
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="w-[350px] bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-500">
-
-        <h2 className="text-2xl font-bold text-center mb-6">
-          {isSignup ? "Real Estate Signup" : "Real Estate Login"}
+        <h2 className="text-2xl font-bold text-black text-center mb-6">
+          Real Estate LogIn
         </h2>
 
-        <form
-          onSubmit={isSignup ? handleSignup : handleLogin}
-          className="space-y-4"
-        >
+        <form onSubmit={handleLogIn} className="space-y-4">
           <input
             type="text"
             placeholder="Username"
-            className="w-full px-4 py-2 border border-gray-300 rounded-md"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
@@ -95,7 +76,7 @@ function LogIn() {
           <input
             type="password"
             placeholder="Password"
-            className="w-full px-4 py-2 border border-gray-300 rounded-md"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -103,19 +84,16 @@ function LogIn() {
 
           <button
             type="submit"
-            className="w-full bg-red-500 text-white py-2 rounded-md font-semibold"
+            className="w-full bg-red-500 text-white py-2 rounded-md font-semibold hover:bg-red-600 transition"
           >
-            {isSignup ? "Sign Up" : "Sign In"}
+            LogIn
           </button>
         </form>
 
         <p className="text-center text-gray-600 mt-4">
-          {isSignup ? "Already have an account?" : "Don’t have an account?"}
-          <span
-            className="text-red-500 font-semibold cursor-pointer ml-1"
-            onClick={() => setIsSignup(!isSignup)}
-          >
-            {isSignup ? "Sign In" : "Register"}
+          Don’t have an account?{" "}
+          <span className="text-red-500 font-semibold cursor-pointer">
+            Register
           </span>
         </p>
       </div>
