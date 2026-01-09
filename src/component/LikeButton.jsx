@@ -18,7 +18,7 @@ import { Heart } from "lucide-react";
   return (
     <button
       onClick={() => setLiked(!liked)}
-      className="absolute top-3 right-3 bg-white p-2 rounded-full shadow"
+      className="absolute top-3 right-3 bg-white p-2  cursor-pointer rounded-full shadow"
     >
       <Heart
         size={20}
