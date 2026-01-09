@@ -52,24 +52,26 @@ function Contact() {
     toast.success("Thank you! We will contact you soon.");
     setFormData({
       name: "",
-    email: "",
-    phone: "",
-    age: "",
-    gender: "",
-    city: "",
-    message: "",
-    error: "",
+      email: "",
+      phone: "",
+      age: "",
+      gender: "",
+      city: "",
+      message: "",
+      error: "",
     });
   };
 
   return (
     <>
       <Navbar />
-       <Toaster/>
-       
-      <div className="min-h-screen flex justify-center items-start p-5  bg-gray-100 mt-15">
+      <Toaster />
+
+      <div className="min-h-screen flex   flex-row justify-evenly items-center bg-gray-100 mt-10">
         <div className="w-100 bg-gray-200 rounded-2xl border-1  shadow-2xl mt-10 p-4">
-          <h1 className="text-xl font-semibold mb-1">Hello, <span className="text-red-500">{formData.name}</span></h1>
+          <h1 className="text-xl font-semibold mb-1">
+            Hello, <span className="text-red-500">{formData.name}</span>
+          </h1>
 
           <input
             type="text"
@@ -111,7 +113,6 @@ function Contact() {
             onChange={(e) => setFormData({ ...formData, age: e.target.value })}
           />
 
-      
           <select
             className="w-full px-5 py-2 border border-black rounded-lg mb-2 focus:outline-none focus:border-red-500"
             value={formData.city}
@@ -124,7 +125,6 @@ function Contact() {
             <option value="Bengaluru">Bengaluru</option>
           </select>
 
-        
           {formData.error && (
             <p className="text-red-700 text-xs mt-1">{formData.error}</p>
           )}
@@ -169,9 +169,21 @@ function Contact() {
             className="w-full px-5 py-2 border border-black rounded-lg mb-2 focus:outline-none focus:border-red-500"
           ></textarea>
 
-          <Button onClick={sendMessage} title="Send Message"  />
+          <Button onClick={sendMessage} title="Send Message" />
+        </div>
+
+        <div className="">
+          <p className="text-2xl mt-5 font-semibold text-black">
+            Find Us on 
+             <span className="text-red-500">Google Maps</span>
+          </p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121042.54456216369!2d73.64501374237979!3d18.547894198124688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf9e0620d971%3A0x5b56f09c8e1b5d14!2sInstamart!5e0!3m2!1sen!2sin!4v1750765167303!5m2!1sen!2sin"
+            className="w-[500px] h-[500px] mt-4"
+          ></iframe>
         </div>
       </div>
+
       <Footer />
     </>
   );
