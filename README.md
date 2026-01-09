@@ -23,7 +23,7 @@ Click Here to visit our website [Click Here]()
 
 ---
 
-## project Structure
+## Project Folder Structure
 
 - `index.html` -main landing page
 - `components\` - components which can be used multiple times in code
