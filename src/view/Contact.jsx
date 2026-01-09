@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
 import Button from "../component/Button";
+import toast, { Toaster } from "react-hot-toast";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -48,7 +49,7 @@ function Contact() {
   }, []);
 
   const sendMessage = () => {
-    alert("Thank you! We will contact you soon.");
+    toast.success("Thank you! We will contact you soon.");
     setFormData({
       name: "",
     email: "",
@@ -64,8 +65,10 @@ function Contact() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen flex justify-center items-start p-5 bg-gray-100 mt-15">
-        <div className="w-100 bg-gray-200 rounded-2xl mt-10 p-4">
+       <Toaster/>
+       
+      <div className="min-h-screen flex justify-center items-start p-5  bg-gray-100 mt-15">
+        <div className="w-100 bg-gray-200 rounded-2xl border-1  shadow-2xl mt-10 p-4">
           <h1 className="text-xl font-semibold mb-1">Hello, <span className="text-red-500">{formData.name}</span></h1>
 
           <input
@@ -163,7 +166,7 @@ function Contact() {
             onChange={(e) =>
               setFormData({ ...formData, message: e.target.value })
             }
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-5 py-2 border border-black rounded-lg mb-2 focus:outline-none focus:border-red-500"
           ></textarea>
 
           <Button onClick={sendMessage} title="Send Message"  />
